@@ -1,6 +1,6 @@
 #%%Guess and Check Algorithm
 """
-Demonstration of the guess and check Algorithm
+Demonstration of the Guess and check Algorithm
 Ref: MIT 6.001 (2016) Lecture 3
 """
 import time
