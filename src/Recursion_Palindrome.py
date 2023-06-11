@@ -1,20 +1,29 @@
 """
-Is Palindrome ?
+Palindrom Check
 """
+# %% Function
 
-def is_Palindrome(s):
-    """Checks if Palindrome
+
+def is_palindrome(payload):
+    """ Check is entered string is a Palindrome
     Args:
-        s (str): String
+        payload (String): String to check for Palindrome
     Returns:
-        result(bool) : if Palindrome True else False
-    """   
-    if len(s) <= 1:
+        result(Boolean) : True or False
+    """
+    assert isinstance(payload, str), "Warning: Entered payload not a string"
+    payload = str(payload).lower().strip()
+    if len(payload) <= 1:
         result = True
     else:
-        result = s[0] == s[-1] and is_Palindrome(s[1:-1])
-        
+        result = payload[0] == payload[-1] and is_palindrome(payload[1:-1])
     return result
-        
-print('\n___OUTPUT___')
-print(is_Palindrome('abcdeyedcba'),'\n')
+
+
+# %% Call
+PAYLOAD_STRING = "AooA"
+print("\n******************************")
+print(f"String -> {PAYLOAD_STRING} : Palindrome = {is_palindrome(PAYLOAD_STRING)}")
+print("******************************\n")
+
+# %%
