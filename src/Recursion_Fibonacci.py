@@ -37,7 +37,7 @@ def fib_series(n):
        
 
 #%% Function call : Return List
-PAYLOAD = 10
+PAYLOAD = 100
 func = fib_series
 
 print("\n******************************")
