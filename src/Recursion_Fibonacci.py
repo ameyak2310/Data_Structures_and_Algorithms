@@ -1,15 +1,13 @@
 """ 
-Return Fibonacci
-1, 2, 3, 4, 5,
-0, 1, 1, 2, 3, 5, 
+Function to return Fibonacci Series
 """
+#%% Last fibonacci Element
+
 
 def fib(n):
     """Return Fibonacci of an interger n
-
     Args:
         n (int): input 
-
     Returns:
         result(int): Fibonacci of n
     """
@@ -19,21 +17,30 @@ def fib(n):
         result = fib(n-1) + fib(n-2)
     return result
 
-NUM = 100
+
+#%% Function call return number          
+NUM = 10
 print("\n___OUTPUT___")
 for NUM in range(NUM):
     print(f'Fibonacci of {NUM} is {fib(NUM)}')
     
-    
-     def iter_fib(n):
-    fib = np.ones(n+1)
-    fib[0] = 0
-    for i in range(3, n+1):
-        fib[i] = fib[i-1] + fib[i-2]
-        
-    return fib
+#%% Returns Fibonacci series
 
-iter_fib(6)
+
+def fib_series(n):
+    fib_list = [1] * n + [1]
+    fib_list[0] = 0
+    for i in range(3, n+1):
+        fib_list[i] = fib_list[i-1] + fib_list[i-2]
         
-           
-    
+    return fib_list
+       
+
+#%% Function call : Return List
+PAYLOAD = 10
+func = fib_series
+
+print("\n******************************")
+print(f"Sorted List = {func(PAYLOAD)}")
+print("******************************\n")
+# %%
