@@ -23,3 +23,17 @@ NUM = 100
 print("\n___OUTPUT___")
 for NUM in range(NUM):
     print(f'Fibonacci of {NUM} is {fib(NUM)}')
+    
+    
+     def iter_fib(n):
+    fib = np.ones(n+1)
+    fib[0] = 0
+    for i in range(3, n+1):
+        fib[i] = fib[i-1] + fib[i-2]
+        
+    return fib
+
+iter_fib(6)
+        
+           
+    
