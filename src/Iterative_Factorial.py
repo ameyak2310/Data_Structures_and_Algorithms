@@ -2,6 +2,7 @@
 Calculates Factorial Iteratively
 """
 import time
+
 #%% Function
 
 

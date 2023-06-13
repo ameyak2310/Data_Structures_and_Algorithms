@@ -21,7 +21,7 @@ def is_palindrome(payload):
 
 
 # %% Call
-PAYLOAD_STRING = "AooA"
+PAYLOAD_STRING = "AooAo"
 print("\n******************************")
 print(f"String -> {PAYLOAD_STRING} : Palindrome = {is_palindrome(PAYLOAD_STRING)}")
 print("******************************\n")

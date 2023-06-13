@@ -5,7 +5,7 @@ Ref: MIT 6.001 (2016) Lecture 3
 """
 import time
 
-NUM = int(input('\nEnter number to find cuberoot:\n')) #-27
+NUM = int(input('\nEnter number to find cuberoot:\n'))
 
 start_time = time.time()
 
