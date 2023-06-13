@@ -1,9 +1,9 @@
 """
-Calculates Factorial Recursively
+Calculates Factorial Iteratively
 """
 import time
-
-def factorial_recur(number):
+#%% Function
+def factorial_iter(number):
     """Calculate facorial of an interger recursively
     Args:
         n (int): Integer
@@ -15,17 +15,17 @@ def factorial_recur(number):
     elif number == 1:
         result = 1
     else:
-        result = number*factorial_recur(number-1)
+        result = 1
+        for i in range(1,number+1):
+            result = result * i
     return result
-
-
-
+#%% Fucntion Call
 NUMBER = 10
+func = factorial_iter
 
-print("\n___OUTPUT with Recursion___")
+print("\n___OUTPUT without Recursion___")
 start_time = time.time()
-print(f"Factorial of {NUMBER} : {factorial_recur(NUMBER)}")
+print(f"Factorial of {NUMBER} : {func(NUMBER)}")
 end_time = time.time()
 print(f"Compute time : {end_time-start_time}\n")
-
-
+# %%
