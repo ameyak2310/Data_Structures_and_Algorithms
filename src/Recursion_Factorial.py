@@ -32,4 +32,3 @@ print(f"Factorial of {NUMBER} : {func(NUMBER)}")
 end_time = time.time()
 print(f"Compute time : {end_time-start_time}\n")
 
-
