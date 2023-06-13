@@ -3,6 +3,9 @@ Calculates Factorial Recursively
 """
 import time
 
+#%% Function
+
+
 def factorial_recur(number):
     """Calculate facorial of an interger recursively
     Args:
@@ -18,13 +21,14 @@ def factorial_recur(number):
         result = number*factorial_recur(number-1)
     return result
 
-
+#%% Function Call
 
 NUMBER = 10
+func = factorial_recur
 
 print("\n___OUTPUT with Recursion___")
 start_time = time.time()
-print(f"Factorial of {NUMBER} : {factorial_recur(NUMBER)}")
+print(f"Factorial of {NUMBER} : {func(NUMBER)}")
 end_time = time.time()
 print(f"Compute time : {end_time-start_time}\n")
 

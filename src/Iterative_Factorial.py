@@ -3,6 +3,8 @@ Calculates Factorial Iteratively
 """
 import time
 #%% Function
+
+
 def factorial_iter(number):
     """Calculate facorial of an interger recursively
     Args:
@@ -19,6 +21,8 @@ def factorial_iter(number):
         for i in range(1,number+1):
             result = result * i
     return result
+
+
 #%% Fucntion Call
 NUMBER = 10
 func = factorial_iter
