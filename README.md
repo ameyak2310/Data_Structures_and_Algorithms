@@ -1,7 +1,7 @@
 # Data Structures and Algorithms
 Hosts code snippets of classical problems related to Data Structures and Algoritms
 
-### Below is a list of programs arranged alphabetically by file name:
+### Index:
 - Approximate Solution : Cuberoot [:link:](https://github.com/ameyak2310/Data_Structures_and_Algorithms/blob/main/src/ApprximateSolution_Cuberoot.py)
 - Bisection Search : Cuberoot [:link:](https://github.com/ameyak2310/Data_Structures_and_Algorithms/blob/main/src/BisectionSearch_Cuberoot.py)
 - Guess and Check : Cuberoot [:link:](https://github.com/ameyak2310/Data_Structures_and_Algorithms/blob/main/src/GuessNcheck_Cuberoot.py)
