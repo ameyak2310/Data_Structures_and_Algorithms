@@ -146,16 +146,20 @@ def display_board(word, guess_list, status):
 def main():
     """Main function to start the game."""
     print("\nHangman Game - Guess the G20 country")
+
+    # Initializes words
     word = random_word()
     word_list = list(word.upper())
     guess_list = ["_"] * len(word)
     status = status_list[-1]
 
+    # Display Status: Number of remaining Attempts
     display_board(word, guess_list, status)
 
     while len(status_list) > 0:
         guess = input("Enter your guess :  ")
 
+        # Executed on correct guess
         if guess.upper() in word_list:
             i = 0
             index_list = []
@@ -172,10 +176,13 @@ def main():
                 print("Congratulations ! You have won.")
                 break
 
+        # Executes on incorrects guess       
         else:
             status_list.pop()
             status = status_list[-1]
             display_board(word, guess_list, status)
+
+            # Executes when number of attempts are exhausted
             if len(status_list) == 1:
                 print("\nGame Over !")
                 print(f"Country : {word}")
