@@ -128,7 +128,7 @@ def random_word():
     return word
 
 
-def display_board(word, guess_list, status):
+def dashboard(word, guess_list, status):
     """Prints out the status of the game
 
     Args:
@@ -136,8 +136,8 @@ def display_board(word, guess_list, status):
         guess_list (list): List of correctly guessed letters
         status (int): Number of remaining attempts
     """
-    print(f"Number of letters : {len(word)} letters")
-    print(
+    print(f"\nNumber of letters : {len(word)} letters")
+    print('Country: ' ,
         "".join(guess_list),
     )
     print(status)
@@ -154,7 +154,7 @@ def main():
     status = status_list[-1]
 
     # Display Status: Number of remaining Attempts
-    display_board(word, guess_list, status)
+    dashboard(word, guess_list, status)
 
     while len(status_list) > 0:
         guess = input("Enter your guess :  ")
@@ -171,21 +171,21 @@ def main():
             for i in index_list:
                 guess_list[i] = guess.upper()
 
-            display_board(word, guess_list, status)
+            dashboard(word, guess_list, status)
             if "_" not in guess_list:
-                print("Congratulations ! You have won.")
+                print("Congratulations ! You have won.\n")
                 break
 
         # Executes on incorrects guess       
         else:
             status_list.pop()
             status = status_list[-1]
-            display_board(word, guess_list, status)
+            dashboard(word, guess_list, status)
 
             # Executes when number of attempts are exhausted
             if len(status_list) == 1:
                 print("\nGame Over !")
-                print(f"Country : {word}")
+                print(f"Country : {word}\n")
                 break
 
 
