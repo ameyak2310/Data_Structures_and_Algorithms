@@ -125,6 +125,7 @@ def random_word():
     word = country_list[index]
     return word
 
+
 def status_reset(hangman_list):
     """Resets number of remaining attempts
 
@@ -137,6 +138,7 @@ def status_reset(hangman_list):
     status_list = hangman_list[::-1]
     return status_list
 
+
 def dashboard(word, guess_list, status):
     """Prints out the status of the game
 
@@ -146,7 +148,8 @@ def dashboard(word, guess_list, status):
         status (int): Number of remaining attempts
     """
     print(f"\nNumber of letters : {len(word)} letters")
-    print('Country: ' ,
+    print(
+        "Country: ",
         "".join(guess_list),
     )
     print(status)
@@ -155,7 +158,7 @@ def dashboard(word, guess_list, status):
 def game():
     """Main function to start the game."""
     print("\nHangman Game - Guess the G20 country")
-    
+
     # Initializes words
     word = random_word()
     word_list = list(word.upper())
@@ -186,7 +189,7 @@ def game():
                 print("Congratulations ! You have won.\n")
                 break
 
-        # Executes on incorrects guess       
+        # Executes on incorrects guess
         else:
             status_list.pop()
             status = status_list[-1]
@@ -198,20 +201,22 @@ def game():
                 print(f"Country : {word}\n")
                 break
 
+
 def main():
-    """Executes the game
-    """
+    """Executes the game"""
     status = True
     while status:
         option = input("Press p for play | any button for quit : ")
-        if option == 'p':
+        if option == "p":
             print("Loading...")
             game()
         else:
             print("Thank you for playing !\n")
             status = False
 
+
+# %% Function Call
 if __name__ == "__main__":
     main()
 
-#%%
+# %%
