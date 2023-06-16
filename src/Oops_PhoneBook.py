@@ -12,19 +12,27 @@ class Contact:
     Returns:
         None: Performs functions as defined in main app
     """
-
-    databook = {
-        "NAME": [],  # ["Default"],
-        "NUMBER": [],  # [00000],
-        "EMAIL": [],  # ["default@default.com"],
-        "UPDATE": [],  # ["2023-06-16 17:13:28.161998"],
-    }
+    databook = {}
 
     def __init__(self, name, number, email) -> None:
         self.name = name
         self.number = number
         self.email = email
         self.update = str(datetime.datetime.now())
+
+    def load_phonebook():
+        """Loads existing databook
+
+        Returns:
+            databook(dict): Currently loaded dictionary
+        """
+        databook = {
+            "NAME": [],  # ["Default"],
+            "NUMBER": [],  # [00000],
+            "EMAIL": [],  # ["default@default.com"],
+            "UPDATE": [],  # ["2023-06-16 17:13:28.161998"],
+            }
+        return databook
 
     def add() -> None:
         """Adds contact to databook"""
@@ -70,6 +78,7 @@ class Contact:
 def main():
     """Main function for Phonebook"""
     print("\n\n>>> Phone Book <<<")
+    Contact.databook = Contact.load_phonebook()
     print(f"No of contacts : {Contact.display().shape[0]}")
 
     status = True
