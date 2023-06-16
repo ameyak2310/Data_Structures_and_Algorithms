@@ -36,6 +36,7 @@ class Contact:
         Contact.databook["NUMBER"].append(contact.number)
         Contact.databook["EMAIL"].append(contact.email)
         Contact.databook["UPDATE"].append(str(datetime.datetime.now()))
+        print("\nContact added succesfully !")
 
     def display() -> None:
         """Returns current databook into a dataframe
@@ -43,10 +44,14 @@ class Contact:
         Returns:
             df(DataFrame): Current databook
         """
-        df = pd.DataFrame(
+        current_phonebook = pd.DataFrame(
             data=Contact.databook, columns=["NAME", "NUMBER", "EMAIL", "UPDATE"]
         )
-        return df
+        print("\n Current Phonebook")
+        print("\n\n--------------------")
+        print(current_phonebook, "\n")
+        print("--------------------\n\n")
+        return current_phonebook
 
     def prompt() -> None:
         """Prompts user for input
@@ -66,19 +71,16 @@ def main():
     """Main function for Phonebook"""
     print("\n\n>>> Phone Book <<<")
     print(f"No of contacts : {Contact.display().shape[0]}")
+
     status = True
     while status:
         function = Contact.prompt()
 
         if function == "p":
-            print("\n Current Phonebook")
-            print("\n\n--------------------")
-            print(Contact.display(), "\n")
-            print("--------------------\n\n")
+            Contact.display()
 
         elif function == "a":
             Contact.add()
-            print("Contact added succesfully")
 
         elif function == "q":
             status = False
