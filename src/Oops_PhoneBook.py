@@ -49,8 +49,7 @@ class Contact:
         number = input("Enter contact number : ")
         email = input("Enter contact email : ")
         contact = Contact(name, number, email)
-
-        print("----", Contact.databook)
+        
         Contact.databook["NAME"].append(contact.name)
         Contact.databook["NUMBER"].append(contact.number)
         Contact.databook["EMAIL"].append(contact.email)
